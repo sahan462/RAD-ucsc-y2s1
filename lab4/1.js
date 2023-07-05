@@ -3,7 +3,15 @@ class Rectangle{
         this.width = width;
         this.height = height;
     }
+
+    getArea(){
+        return this.width*this.height;
+    }
+
 }
 
 const rec1 = new Rectangle(10,15);
-console.log("width: ",rec1.width);
+const rec2 = new Rectangle(20,30);
+
+console.log("Area of the rectangle 1 is", rec1.getArea());
+console.log("Area of the rectangle 2 is", rec2.getArea())
