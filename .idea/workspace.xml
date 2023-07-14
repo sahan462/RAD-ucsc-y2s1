@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af80a798-42fc-4409-be65-695d55b54113" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="af80a798-42fc-4409-be65-695d55b54113" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +63,7 @@
       <recent name="C:\Users\ASUS\IdeaProjects\RAD\lab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.4.js">
+  <component name="RunManager">
     <configuration name="4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/lab4/4.js" working-dir="$PROJECT_DIR$/lab4">
       <method v="2" />
     </configuration>
@@ -90,6 +88,7 @@
       <workItem from="1687150359302" duration="23048000" />
       <workItem from="1688533276127" duration="8901000" />
       <workItem from="1688964573479" duration="43000" />
+      <workItem from="1689184487977" duration="5675000" />
     </task>
     <servers />
   </component>
