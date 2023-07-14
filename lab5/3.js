@@ -21,11 +21,17 @@ function Cube() {
 
 
 Cube.prototype.area = function() {
-    var l = prompt("Enter length: ");
+    let l = prompt("Enter side length: ");
+    l = parseInt(l);
+
+    return l*l;
 };
 
 Cube.prototype.volume = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let l = prompt("Enter side length: ");
+    l = parseInt(l);
+
+    return l*l*l;
 };
 
 
@@ -35,11 +41,30 @@ function Cuboid() {
 
 
 Cuboid.prototype.area = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let l = prompt("Enter length: ");
+    l = parseInt(l);
+
+    let w = prompt("Enter width: ");
+    w = parseInt(w);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    return 2*l*w + 2*l*h + 2*w*h;
 };
 
 Cuboid.prototype.volume = function() {
-    console.log("Concrete implementation of abstractMethod");
+
+    let l = prompt("Enter length: ");
+    l = parseInt(l);
+
+    let w = prompt("Enter width: ");
+    w = parseInt(w);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    return l*w*h;
 };
 
 function Cylinder() {
@@ -47,11 +72,23 @@ function Cylinder() {
 }
 
 Cylinder.prototype.area = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let r = prompt("Enter radius: ");
+    r = parseInt(r);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    return 2*Math.PI*r*r + 2*Math.PI*r*h;
 };
 
 Cylinder.prototype.volume = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let r = prompt("Enter radius: ");
+    r = parseInt(r);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    return Math.PI*r*r*h;
 };
 
 
@@ -60,11 +97,23 @@ function Sphere() {
 }
 
 Sphere.prototype.area = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let r = prompt("Enter radius: ");
+    r = parseInt(r);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    return 4*Math.PI*r*r;
 };
 
 Sphere.prototype.volume = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let r = prompt("Enter radius: ");
+    r = parseInt(r);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    return (4/3.0)*Math.PI*Math.pow(r,3);
 };
 
 
@@ -73,20 +122,45 @@ function Cone() {
 }
 
 Cone.prototype.area = function() {
-    console.log("Concrete implementation of abstractMethod");
+    let r = prompt("Enter radius: ");
+    r = parseInt(r);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    let slantHeight = Math.sqrt(r * r + h * h);
+    return Math.PI * r * (r + slantHeight);
+
 };
 
 Cone.prototype.volume = function() {
-    console.log("Concrete implementation of abstractMethod");
-};
+    let r = prompt("Enter radius: ");
+    r = parseInt(r);
+
+    let h = prompt("Enter height: ");
+    h = parseInt(h);
+
+    let slantHeight = Math.sqrt(r * r + h * h);
+    return (1 / 3) * Math.PI * Math.pow(radius, 2) * height;
+}
 
 
-ConcreteClass.prototype = Object.create(AbstractShapeClass.prototype);
-ConcreteClass.prototype.constructor = ConcreteClass;
+Cube.prototype = Object.create(AbstractShapeClass.prototype);
+Cube.prototype.constructor = Cube;
 
-// Implement the abstract method in the subclass
+Cuboid.prototype = Object.create(AbstractShapeClass.prototype);
+Cuboid.prototype.constructor = Cuboid;
 
+Cylinder.prototype = Object.create(AbstractShapeClass.prototype);
+Cylinder.prototype.constructor = Cylinder;
+
+Sphere.prototype = Object.create(AbstractShapeClass.prototype);
+Sphere.prototype.constructor = Sphere;
+
+Cone.prototype = Object.create(AbstractShapeClass.prototype);
+Cone.prototype.constructor = Cone;
 
 // Usage
-var instance = new ConcreteClass();
-instance.abstractMethod(); // Outputs: "Concrete implementation of abstractMethod"
+let cube = new Cube();
+console.log(cube.area());// Outputs: "Concrete implementation of abstractMethod"
+console.log(cube.volume());
