@@ -25,17 +25,19 @@ Cube.prototype.constructor = Cube;
 
 
 Cube.prototype.area = function() {
-    let l = document.write("Enter side length: ");
-    l = parseInt(l);
+    const l = document.getElementById("cubesidelength");
+    let sl = parseInt(l.value) ;
 
-    return l*l;
+    const rescube = document.getElementById("cube");
+    rescube.innerHTML = ("Area of the Cube: "+(sl*sl*6));
 };
 
 Cube.prototype.volume = function() {
-    let l = prompt("Enter side length: ");
-    l = parseInt(l);
+    const l = document.getElementById("cubesidelength");
+    let sl = parseInt(l.value) ;
 
-    return l*l*l;
+    const rescube = document.getElementById("cube");
+    rescube.innerHTML = ("Volume of the Cube: "+(sl*sl*sl));
 };
 
 
@@ -48,16 +50,17 @@ Cuboid.prototype.constructor = Cuboid;
 
 
 Cuboid.prototype.area = function() {
-    let l = prompt("Enter length: ");
-    l = parseInt(l);
+    const l = document.getElementById("length");
+    let cl = parseInt(l.value) ;
 
-    let w = prompt("Enter width: ");
-    w = parseInt(w);
+    const h = document.getElementById("height");
+    let ch = parseInt(l.value) ;
 
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
+    const w = document.getElementById("width");
+    let cw = parseInt(l.value) ;
 
-    return 2*l*w + 2*l*h + 2*w*h;
+    const rescuboid = document.getElementById("cuboid");
+    rescuboid.innerHTML = ("Volume of the Cuboid: "+(2*cl*cw + 2*cl*ch + 2*cw*ch));
 };
 
 Cuboid.prototype.volume = function() {
@@ -74,93 +77,10 @@ Cuboid.prototype.volume = function() {
     return l*w*h;
 };
 
-function Cylinder() {
-    AbstractShapeClass.call(this); // Call the constructor of the abstract class
-}
-
-Cylinder.prototype = Object.create(AbstractShapeClass.prototype);
-Cylinder.prototype.constructor = Cylinder;
-
-Cylinder.prototype.area = function() {
-    let r = prompt("Enter radius: ");
-    r = parseInt(r);
-
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
-
-    return 2*Math.PI*r*r + 2*Math.PI*r*h;
-};
-
-Cylinder.prototype.volume = function() {
-    let r = prompt("Enter radius: ");
-    r = parseInt(r);
-
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
-
-    return Math.PI*r*r*h;
-};
 
 
-function Sphere() {
-    AbstractShapeClass.call(this); // Call the constructor of the abstract class
-}
 
-Sphere.prototype = Object.create(AbstractShapeClass.prototype);
-Sphere.prototype.constructor = Sphere;
-
-Sphere.prototype.area = function() {
-    let r = prompt("Enter radius: ");
-    r = parseInt(r);
-
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
-
-    return 4*Math.PI*r*r;
-};
-
-Sphere.prototype.volume = function() {
-    let r = prompt("Enter radius: ");
-    r = parseInt(r);
-
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
-
-    return (4/3.0)*Math.PI*Math.pow(r,3);
-};
-
-
-function Cone() {
-    AbstractShapeClass.call(this); // Call the constructor of the abstract class
-}
-
-Cone.prototype = Object.create(AbstractShapeClass.prototype);
-Cone.prototype.constructor = Cone;
-
-Cone.prototype.area = function() {
-    let r = prompt("Enter radius: ");
-    r = parseInt(r);
-
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
-
-    let slantHeight = Math.sqrt(r * r + h * h);
-    return Math.PI * r * (r + slantHeight);
-
-};
-
-Cone.prototype.volume = function() {
-    let r = prompt("Enter radius: ");
-    r = parseInt(r);
-
-    let h = prompt("Enter height: ");
-    h = parseInt(h);
-
-    let slantHeight = Math.sqrt(r * r + h * h);
-    return (1 / 3) * Math.PI * Math.pow(r, 2) * h;
-}
 
 // Usage
 let cube = new Cube();
-console.log(cube.area());// Outputs: "Concrete implementation of abstractMethod"
-console.log(cube.volume());
+let cuboid = new Cuboid();
