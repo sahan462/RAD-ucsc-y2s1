@@ -20,8 +20,12 @@ function Cube() {
 }
 
 
+Cube.prototype = Object.create(AbstractShapeClass.prototype);
+Cube.prototype.constructor = Cube;
+
+
 Cube.prototype.area = function() {
-    let l = prompt("Enter side length: ");
+    let l = document.write("Enter side length: ");
     l = parseInt(l);
 
     return l*l;
@@ -38,6 +42,9 @@ Cube.prototype.volume = function() {
 function Cuboid() {
     AbstractShapeClass.call(this); // Call the constructor of the abstract class
 }
+
+Cuboid.prototype = Object.create(AbstractShapeClass.prototype);
+Cuboid.prototype.constructor = Cuboid;
 
 
 Cuboid.prototype.area = function() {
@@ -71,6 +78,9 @@ function Cylinder() {
     AbstractShapeClass.call(this); // Call the constructor of the abstract class
 }
 
+Cylinder.prototype = Object.create(AbstractShapeClass.prototype);
+Cylinder.prototype.constructor = Cylinder;
+
 Cylinder.prototype.area = function() {
     let r = prompt("Enter radius: ");
     r = parseInt(r);
@@ -95,6 +105,9 @@ Cylinder.prototype.volume = function() {
 function Sphere() {
     AbstractShapeClass.call(this); // Call the constructor of the abstract class
 }
+
+Sphere.prototype = Object.create(AbstractShapeClass.prototype);
+Sphere.prototype.constructor = Sphere;
 
 Sphere.prototype.area = function() {
     let r = prompt("Enter radius: ");
@@ -121,6 +134,9 @@ function Cone() {
     AbstractShapeClass.call(this); // Call the constructor of the abstract class
 }
 
+Cone.prototype = Object.create(AbstractShapeClass.prototype);
+Cone.prototype.constructor = Cone;
+
 Cone.prototype.area = function() {
     let r = prompt("Enter radius: ");
     r = parseInt(r);
@@ -141,24 +157,8 @@ Cone.prototype.volume = function() {
     h = parseInt(h);
 
     let slantHeight = Math.sqrt(r * r + h * h);
-    return (1 / 3) * Math.PI * Math.pow(radius, 2) * height;
+    return (1 / 3) * Math.PI * Math.pow(r, 2) * h;
 }
-
-
-Cube.prototype = Object.create(AbstractShapeClass.prototype);
-Cube.prototype.constructor = Cube;
-
-Cuboid.prototype = Object.create(AbstractShapeClass.prototype);
-Cuboid.prototype.constructor = Cuboid;
-
-Cylinder.prototype = Object.create(AbstractShapeClass.prototype);
-Cylinder.prototype.constructor = Cylinder;
-
-Sphere.prototype = Object.create(AbstractShapeClass.prototype);
-Sphere.prototype.constructor = Sphere;
-
-Cone.prototype = Object.create(AbstractShapeClass.prototype);
-Cone.prototype.constructor = Cone;
 
 // Usage
 let cube = new Cube();
