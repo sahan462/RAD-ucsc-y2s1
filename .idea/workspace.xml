@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af80a798-42fc-4409-be65-695d55b54113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab5/2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab5/3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab5/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab5/2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab5/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab5/3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,7 +69,7 @@
       <recent name="C:\Users\ASUS\IdeaProjects\RAD\lab2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.4.js">
     <configuration name="4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/lab4/4.js" working-dir="$PROJECT_DIR$/lab4">
       <method v="2" />
     </configuration>
@@ -94,7 +95,8 @@
       <workItem from="1688533276127" duration="8901000" />
       <workItem from="1688964573479" duration="43000" />
       <workItem from="1689184487977" duration="5675000" />
-      <workItem from="1689346198386" duration="17949000" />
+      <workItem from="1689346198386" duration="18711000" />
+      <workItem from="1689593372022" duration="2182000" />
     </task>
     <servers />
   </component>
