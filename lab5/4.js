@@ -18,10 +18,12 @@ function Car_Game() {
     AbstractShapeClass.call(this); // Call the constructor of the abstract class
 }
 
-
 Car_Game.prototype = Object.create(AbstractShapeClass.prototype);
 Car_Game.prototype.constructor = Car_Game;
 
+class Car_Game extends Game{
+
+}
 function Puzzle_Game() {
     AbstractShapeClass.call(this); // Call the constructor of the abstract class
 }
