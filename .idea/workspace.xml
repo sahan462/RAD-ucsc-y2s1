@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af80a798-42fc-4409-be65-695d55b54113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab5/4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab5/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab5/4.js" afterDir="false" />
     </list>
@@ -20,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -94,7 +95,7 @@
       <workItem from="1688964573479" duration="43000" />
       <workItem from="1689184487977" duration="5675000" />
       <workItem from="1689346198386" duration="18711000" />
-      <workItem from="1689593372022" duration="9509000" />
+      <workItem from="1689593372022" duration="26250000" />
     </task>
     <servers />
   </component>
