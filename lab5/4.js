@@ -1,9 +1,10 @@
 class game {
-    constructor(theme, avatar, level, game) {
+    constructor(theme, avatar, level, game, score) {
         this.theme = theme;
         this.avatar = avatar;
         this.level = level;
         this.game = game;
+        this.score = score;
     }
 
     setLevel(level) {
@@ -39,9 +40,6 @@ class game {
     }
 
     start() {
-        // Implement the start behavior for the game
-        alert("Game started");
-        const gamedisplay = document.getElementById('games');
     }
 
     pause() {
@@ -53,32 +51,69 @@ class game {
     }
 
     cancel() {
-        console.log("Cancelled");
+        document.getElementById("gameconsole").innerHTML = "<h1>Game Cancelled!!<h1>";
+        document.getElementById("games").innerHTML = "";
     }
 }
 
 class car_game extends game {
 
     constructor(theme,avatar,level,game) {
-        super(theme,avatar.name,level,game);
+        super(theme,avatar.name,level,game,0);
     }
+    start() {
+        const gamedisplay = document.getElementById('games');
+        gamedisplay.innerHTML =  "<button onclick='gamer.update()'>add score</button>"
+    }
+
+    update(){
+        if(this.score === 100) {
+            document.getElementById('games').innerHTML = "YOU WON!!";
+            document.getElementById("score").innerHTML = "Total Score: "+this.score;
+        }else{
+            document.getElementById("score").innerHTML = "Total Score: "+this.score;
+            this.score = this.score + 10;
+        }
+    }
+
+    pause() {
+        super.pause();
+        document.getElementById("score").innerHTML = "<h3>Game Paused!!!</h3>";
+    }
+
+    resume() {
+        super.resume();
+        this.start();
+        document.getElementById("score").innerHTML = this.score;
+    }
+
+
+}
+
+class shooting_game extends game {
+    constructor(theme,avatar,level,game) {
+        super(theme,avatar.name,level,game,0);
+    }
+
+    start() {
+        super.start(); // If needed, additional implementation for the car_game start method can be added here
+        gamedisplay.innerHTML = "game started";
+    }
+}
+
+class puzzle_game extends game {
+    constructor(theme,avatar,level,game) {
+        super(theme,avatar.name,level,game,0);
+    }
+
     start() {
         super.start(); // If needed, additional implementation for the car_game start method can be added here
         gamedisplay.innerHTML = "game started"
     }
 }
 
-class shooting_game extends game {
-    constructor(theme,avatar,level,game) {
-        super(theme,avatar.name,level,game);
-    }
-}
+let gamer;
 
-class puzzle_game extends game {
-    constructor(theme,avatar,level,game) {
-        super(theme,avatar.name,level,game);
-    }
-}
 
 function newUser() {
 
@@ -90,32 +125,34 @@ function newUser() {
     const level = game_data.elements['level'].value;
     const game = game_data.elements['game'].value;
 
+
     if(new_game.value === "Car Game"){
-        const cargame = new car_game(theme,avatar,level,game);
+        gamer = new car_game(theme,avatar,level,game);
+
         document.getElementById("gameconsole").innerHTML = "    <h1>Car Game</h1>\n" +
             "\n" +
             "    <div style=\"margin-top: 10px\">\n" +
-            "      <button onclick='cargame.start()'>Start</button>\n" +
-            "      <button>Pause</button>\n" +
-            "      <button>Resume</button>\n" +
-            "      <button>Cancel</button>\n" +
+            "      <button onclick='gamer.start();'>Start</button>\n" +
+            "      <button onclick='gamer.pause()'>Pause</button>\n" +
+            "      <button onclick='gamer.resume()'>Resume</button>\n" +
+            "      <button onclick='gamer.cancel()'>Cancel</button>\n" +
             "    </div>";
     }else if(new_game.value === "Puzzle Game"){
-        const puzzlegame = new puzzle_game(theme,avatar,level,game);
+        gamer = new puzzle_game(theme,avatar,level,game);
         document.getElementById("gameconsole").innerHTML = "    <h1>Puzzle Game</h1>\n" +
             "\n" +
             "    <div style=\"margin-top: 10px\">\n" +
-            "      <button>Start</button>\n" +
+            "      <button onclick='gamer.start()'>Start</button>\n" +
             "      <button>Pause</button>\n" +
             "      <button>Resume</button>\n" +
             "      <button>Cancel</button>\n" +
             "    </div>";
     }else if(new_game.value === "Shooting Game"){
-        const shootinggame = new shooting_game(theme,avatar,level,game);
+        gamer = new shooting_game(theme,avatar,level,game);
         document.getElementById("gameconsole").innerHTML = "    <h1>Shooting Game</h1>\n" +
             "\n" +
             "    <div style=\"margin-top: 10px\">\n" +
-            "      <button>Start</button>\n" +
+            "      <button onclick='gamer.start()'>Start</button>\n" +
             "      <button>Pause</button>\n" +
             "      <button>Resume</button>\n" +
             "      <button>Cancel</button>\n" +
@@ -123,8 +160,8 @@ function newUser() {
     }else{
         document.getElementById("gameconsole").innerHTML = "Currently Not Available";
     }
-
-
 }
+
+
 
 

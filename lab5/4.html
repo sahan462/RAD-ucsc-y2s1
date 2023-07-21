@@ -7,42 +7,41 @@
 </head>
 <body>
 
-  <div style="margin: 10px">
-    <div id="gameconsole">
-      <form id="gamedata">
-        <div style="margin-bottom: 10px" id="theme">
-          <label>Theme: </label>
-          <input type="text" name="theme">
-        </div>
-        <div style="margin-bottom: 10px" id="avatar">
-          <label>Avatar: </label>
-          <input type="file" id="myFile" name="avatar">
-        </div>
-        <div id="level" style="margin-bottom: 10px">
-          <label>Choose Level: </label>
-          <label>
-            <select name="level">
-              <option>Beginner</option>
-              <option>Intermediate</option>
-              <option>Hard</option>
-            </select>
-          </label>
-        </div>
-        <div id="game" style="margin-bottom: 10px">
-          <label>Choose Game: </label>
-          <label>
-            <select id="gameoptions" name="game">
-              <option>Car Game</option>
-              <option>Puzzle Game</option>
-              <option>Shooting Game</option>
-            </select>
-          </label>
-        </div>
-        <button onclick="newUser()">Submit</button>
-      </form>
+<div id="gameconsole" style="margin: 10px">
+  <form id="gamedata">
+    <div style="margin-bottom: 10px" id="theme">
+      <label>Theme: </label>
+      <input type="text" name="theme">
     </div>
-  </div>
+    <div style="margin-bottom: 10px" id="avatar">
+      <label>Avatar: </label>
+      <input type="file" id="myFile" name="avatar">
+    </div>
+    <div id="level" style="margin-bottom: 10px">
+      <label>Choose Level: </label>
+      <label>
+        <select name="level">
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Hard</option>
+        </select>
+      </label>
+    </div>
+    <div id="game" style="margin-bottom: 10px">
+      <label>Choose Game: </label>
+      <label>
+        <select id="gameoptions" name="game">
+          <option>Car Game</option>
+          <option>Puzzle Game</option>
+          <option>Shooting Game</option>
+        </select>
+      </label>
+    </div>
+    <button onclick="newUser()">Submit</button>
+  </form>
+</div>
 
-  <div id="games"></div>
+<div id="games"></div>
+<div id="score"></div>
 </body>
 </html>
