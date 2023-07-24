@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Indexpage from "./components/indexpage";
+import Toggle from "./components/Toggle";
+import Timer from "./components/Timer";
+import TodoList from "./components/TodoList";
+import CardList from "./components/CardList";
+import Form from "./components/Form";
 function App() {
+
+    const list = [
+        'Learn React',
+        'Build a project',
+        'Go for a walk',
+        'Do some exercises',
+        'Join a music class',
+        'Read a novel',
+    ];
+
+    const card = [
+        {title: 'Card 1',content: 'This is the content of Card 1'},
+        {title: 'Card 2',content: 'This is the content of Card 2'},
+        {title: 'Card 3',content: 'This is the content of Card 3'}
+    ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Indexpage/>}></Route>
+              <Route path="/Toggle" element={<Toggle />} ></Route>
+              <Route path="/Timer" element={<Timer />} ></Route>
+              <Route path="/TodoList" element={<TodoList list={list} />} ></Route>
+              <Route path="/CardList" element={<CardList cards={card} />} ></Route>
+              <Route path="/Form" element={<Form />} ></Route>
+
+          </Routes>
+      </BrowserRouter>
   );
 }
 
