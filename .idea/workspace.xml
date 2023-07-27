@@ -5,24 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af80a798-42fc-4409-be65-695d55b54113" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab6/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab6/src/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,35 +42,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "test",
-    "last_opened_file_path": "C:/Users/ASUS/IdeaProjects/RAD",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/IdeaProjects/RAD&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\IdeaProjects\RAD" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\IdeaProjects\RAD\lab6\src" />
       <recent name="C:\Users\ASUS\IdeaProjects\RAD\lab5" />
       <recent name="C:\Users\ASUS\IdeaProjects\RAD\html" />
       <recent name="C:\Users\ASUS\IdeaProjects\RAD\lab2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.4.js">
     <configuration name="4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/lab4/4.js" working-dir="$PROJECT_DIR$/lab4">
       <method v="2" />
     </configuration>
@@ -116,6 +99,8 @@
       <workItem from="1689184487977" duration="5675000" />
       <workItem from="1689346198386" duration="18711000" />
       <workItem from="1689593372022" duration="46882000" />
+      <workItem from="1690136377992" duration="16739000" />
+      <workItem from="1690481495959" duration="787000" />
     </task>
     <servers />
   </component>
