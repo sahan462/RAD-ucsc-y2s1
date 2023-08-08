@@ -1,9 +1,9 @@
-function q2(){
+const Q2 = () => {
     return(
-      <div>
-          <h1>Question 2</h1>
-      </div>
+        <div>
+            <h1>question 2</h1>
+        </div>
     );
 }
 
-export default q2;
+export default Q2;
