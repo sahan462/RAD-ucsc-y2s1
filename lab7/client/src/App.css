@@ -1,0 +1,17 @@
+body{
+  background-color: burlywood;
+}
+
+h1{
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
+.Toggle,.Timer{
+  display: flex;
+  justify-content: center;
+}
+
