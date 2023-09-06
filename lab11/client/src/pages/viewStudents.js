@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from "react-router-dom";
 
 function ViewStudents() {
     const [students, setStudents] = useState([]);
 
     // Effect to fetch students from the database when the component mounts
     useEffect(() => {
-        // Replace this with actual API endpoint for fetching students
-        fetch('/api/students')
-            .then((response) => response.json())
+        console.log('Fetching data...');
+        fetch('/q1')
+            .then((response) => {
+                console.log('Response:', response);
+                return response.json();
+            })
             .then((data) => {
-                // Update the students state with the fetched data
+                console.log('Data:', data);
                 setStudents(data);
             })
             .catch((error) => {
                 console.error('Error fetching students:', error);
             });
     }, []);
+
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200 p-8">
@@ -54,6 +59,13 @@ function ViewStudents() {
                     </table>
                 </div>
             </div>
+            <Link to="/" className="block text-center mt-6">
+                <button
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline inline-block mr-4"
+                >
+                    Back to Home
+                </button>
+            </Link>
         </div>
     );
 }

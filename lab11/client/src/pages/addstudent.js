@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
+import axios from "axios";
 
 function AddStudent() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [rollNo, setRollNo] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert(`Student Details:
-    Name: ${name}
-    Email: ${email}
-    Roll No: ${rollNo}`);
+
+        try {
+            const response = await axios.post("/q1", { name, email, rollNo }); // Use POST method
+            if (response.status === 201) {
+                alert("New Student Created!!!");
+            } else {
+                alert("Student Creation Failed!!");
+            }
+        } catch (e) {
+            alert("Student Creation Failed!!");
+        }
     };
+
 
     return (
         <div className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 min-h-screen py-8">
@@ -76,6 +85,13 @@ function AddStudent() {
                     </div>
                 </form>
             </div>
+            <Link to="/" className="block text-center mt-6">
+                <button
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline inline-block mr-4"
+                >
+                    Back to Home
+                </button>
+            </Link>
         </div>
     );
 }
