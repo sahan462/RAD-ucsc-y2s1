@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {Link, redirect} from 'react-router-dom';
+import axios from "axios";
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = (e) => {
+
+    const handleLogin = async (e) => {
         e.preventDefault();
-        // Implement your login logic here (e.g., send a request to your backend).
-        console.log('Login with:', email, password);
+
+        try {
+            const response = await axios.post("/login", { email: email, password: password });
+            if (response.status === 200) {
+                alert("LogIn Successful!!!");
+                window.location.href = "login/loginhome";
+            } else {
+                alert("LogIn Failed!!");
+            }
+        } catch (e) {
+            console.log(e.message);
+            alert("LogIn Failed!!!");
+        }
     };
 
     return (
@@ -44,11 +57,6 @@ function LoginPage() {
                             required
                         />
                     </div>
-                    <div className="mb-4 text-right">
-                        <Link to="/forgot-password" className="text-blue-500 hover:underline">
-                            Forgot Password?
-                        </Link>
-                    </div>
                     <div className="mb-4">
                         <button
                             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
@@ -66,6 +74,7 @@ function LoginPage() {
                 </p>
             </div>
         </div>
+
     );
 }
 

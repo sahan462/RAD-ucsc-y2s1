@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 function SignupPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSignup = (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault();
-        // Implement your signup logic here (e.g., send a request to your backend).
-        console.log('Signup with:', email, password);
+        try{
+            const response = await axios.post("/q2/signup", {email: email, password: password});
+            if (response.status === 200){
+                alert("Registration Successful!!!");
+            }else {
+                alert("Registration Failed!!!");
+            }
+        }catch (e){
+            alert("Sign Up Failed!!!");
+        }
     };
 
     return (

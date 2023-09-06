@@ -1,48 +1,22 @@
-import User from "../models/userModel";
+const User = require( "../models/userModel");
+const passport = require('passport');
+const bcrypt = require('bcrypt');
 
 const signup = async (req, res) => {
-    try{
-        const newUser = new User(req.body);
-        await newUser.save();
-        res.status(200).send("New User Created");
-    }catch (e){
-        res.status(404).send(e.message);
-    }
-}
 
-const login = async (req, res) => {
-    try{
-        const newUser = new User(req.body);
+    try {
+        const { email, password } = req.body;
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new User({ email, password: hashedPassword });
         await newUser.save();
         res.status(200).send("New User Created");
-    }catch (e){
+    } catch (e) {
         res.status(404).send(e.message);
     }
-}
 
-const logout = async (req, res) => {
-    try{
-        const newUser = new User(req.body);
-        await newUser.save();
-        res.status(200).send("New User Created");
-    }catch (e){
-        res.status(404).send(e.message);
-    }
-}
+};
 
-const forgotpassword = async (req, res) => {
-    try{
-        const newUser = new User(req.body);
-        await newUser.save();
-        res.status(200).send("New User Created");
-    }catch (e){
-        res.status(404).send(e.message);
-    }
-}
 
 module.exports = {
     signup,
-    login,
-    logout,
-    forgotpassword
 }

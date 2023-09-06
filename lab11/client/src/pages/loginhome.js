@@ -1,12 +1,16 @@
 import React from 'react';
+import axios from "axios";
 
 function LoginHome() {
-    const handleLogout = () => {
-        // Implement your logout logic here, e.g., clearing authentication tokens.
-        // Redirect the user to the logout page or perform any necessary actions.
-        console.log('Logged out');
+    const handleLogout = async () => {
+        const response = await axios.post("/logout", {});
+        if (response.status === 200) {
+            alert("Logged Out Successfully!!!");
+            window.location.href = "/q2/";
+        } else {
+            alert("Logging Out Not Completed!!!");
+        }
     };
-
     return (
         <div className="min-h-screen bg-gradient-to-r from-green-400 via-green-300 to-green-200 flex items-center justify-center">
             <div className="bg-white p-8 rounded-lg shadow-lg">

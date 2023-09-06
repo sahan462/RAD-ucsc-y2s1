@@ -4,6 +4,7 @@ import AddStudentPage from "./pages/addstudent";
 import LoginPage from "./pages/login";
 import ViewStudents from "./pages/viewStudents";
 import Signup from "./pages/signup";
+import Loginhome from "./pages/loginhome";
 import { Route, Routes } from 'react-router-dom';
 import axios from "axios";
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/q1/viewStudentList" element={<ViewStudents />} />
             <Route path="/q2" element={<LoginPage />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="q2/login/loginhome" element={<Loginhome />} />
         </Routes>
     );
 }
