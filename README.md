@@ -1,6 +1,6 @@
 # Rapid Application Module Practical Assignments
 
-This repository contains multiple practical assignments completed during the second year, first semester, Rapid Application Module. We have developed several MERN (MongoDB, Express.js, React, Node.js) applications from scratch.
+This repository contains multiple practical assignments completed during the second year, first semester, Rapid Application Module - University of Colombo School of Computing. We have developed several MERN (MongoDB, Express.js, React, Node.js) applications from scratch.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
