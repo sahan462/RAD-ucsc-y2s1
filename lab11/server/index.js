@@ -9,6 +9,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 const User = require('./models/userModel');
+require('dotenv').config();
 
 // Configure CORS
 app.use(
@@ -18,15 +19,16 @@ app.use(
     })
 );
 
-// MongoDB Connection
-connect('mongodb+srv://sahanchandrasena462:mfHpTgwZAvLD5c4z@cluster0.iryaj7f.mongodb.net/?retryWrites=true&w=majority')
-    .then(() => console.log('Connected to MongoDB...'))
-    .catch((error) => console.error('Could not connect to MongoDB:', error));
 
 // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// MongoDB Connection
+connect(process.env.MONGO_URL, )
+    .then(() => console.log("connected to mongodb..."))
+    .catch((e) => console.log(e.message));
 
 // Session configuration
 app.use(
@@ -90,7 +92,6 @@ function isAuthenticated(req, res, next) {
 }
 
 app.get('/q2/login/loginhome', isAuthenticated, (req, res) => {
-    console.log("Inside");
     return res.status(200).json({ message: 'Authentication successful' });
 })
 
@@ -125,8 +126,10 @@ app.post('/logout', (req, res) => {
 });
 
 const student = require('./routes/studentRoute');
-app.use('/q1', student);
+const user = require('./routes/userRoute');
 
+app.use('/q1', student);
+app.use('/q2', user);
 app.listen(5000, () => {
     console.log('App is listening on port 5000');
 });

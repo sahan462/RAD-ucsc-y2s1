@@ -1,4 +1,3 @@
-import './App.css';
 import IndexPage from "./pages/indexpage";
 import AddStudentPage from "./pages/addstudent";
 import LoginPage from "./pages/login";
