@@ -5,12 +5,7 @@ This repository contains multiple practical assignments completed during the sec
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Folder Structure](#folder-structure)
-- [Applications](#applications)
-  - [Application 1](#application-1)
-  - [Application 2](#application-2)
-  - [Application 3](#application-3)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Prerequisites
 
